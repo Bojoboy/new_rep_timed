@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Roboto+Mono');
+
+html, body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header, footer {
+	padding: 23px;
+	color: white;
+	background: #666;
+	font-family: Inconsolata;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+}
+
+#wrapper {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+/*navigation bar*/
+
+header {
+	overflow: hidden;
+	box-shadow: 0px 54px 45px -1px rgba(0,0,0,0.41);
+}
+
+.navigation {
+	list-style: none;
+	background: #666;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.nav-galery{
+	margin-right: auto;
+}
+
+.navigation a {
+	text-decoration: none;
+	display: block;
+	padding: 2em;
+	color: white;
+}
+
+.navigation li {
+	transition: all 0.5s ease;
+}
+
+	.navigation li:hover {
+		background: #555;
+		box-shadow: inset -5px 6px 41px -1px rgba(0,0,0,0.49);
+		transition: all 1.8s ease;
+	}
+
+.nav-txt { 
+  transition: all 0.4s ease; 
+}
+  .nav-txt:hover { 
+  	transform: scale(0.8);
+  	transition: all 1.8s ease;
+
+  }
+
+.navigation .rotate-nav {
+	transition: all 0.5s ease;
+}
+
+	.navigation .rotate-nav:hover {
+		background: #555;
+		box-shadow: inset -5px 6px 41px -1px rgba(0,0,0,0.49);
+		transform: rotate(90deg);
+		transition: all 0.5s ease;
+	}
+
+.rotate-nav .nav-txt { 
+  transition: all .4s ease; 
+}
+  .nav-txt:hover { 
+  	transform: scale(0.8);
+  	transform: rotate(-90deg);
+  	transition: all .5s ease;
+  }
+
+@media all and (max-width: 800px) {
+	.navigation {
+		align-items: stretch;
+		justify-content: space-around;
+	}
+
+	.navigation > li {
+		flex: 1;
+		text-align: center;
+	}
+}
+
+@media all and (max-width: 600px) {
+	.navigation {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.navigation > li {
+		flex: 1;
+		text-align: center;
+	}
+}
+
+/*end of nav bar*/
+
+/*body section*/
+
+.galery {
+	font-family: 'Roboto Mono';
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+.grid {
+	flex: 1;
+}
+
+@media all and (max-width: 800px) {
+	.galery {
+		flex-direction: column;
+	}
+}
+
+.grid {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.grid a {
+	flex: 1 1 250px;
+}
+
+@media all and (max-width: 600px) {
+	.grid {
+		flex-wrap: wrap;
+	}
+}
+
+.image {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/*overflow: hidden;*/
+}
+
+.grid img {
+	width: 90%;
+	height: 90%;
+	object-fit: cover;
+	opacity: .3;
+	transition: all 1s ease;
+}
+
+ .image:hover img {
+	  opacity: 1;
+ }
+
+/* ===-----about section----->*/
+
+.about {
+	font-family: 'Roboto Mono';
+	margin: 20px 0 20px 0; 
+	display: flex;
+	flex-direction: column;
+}
+
+.about-item {
+	position: relative;
+	margin: 20px 0;
+	display: flex;
+}
+
+.about-image {
+	flex: 0 0 250px;
+	height: 100px;
+}
+
+.about-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.description {
+	padding: 20px;
+	flex: 2;
+}
+
+.description p {
+	text-indent: 10px
+}
+
+.gliched-hikari {
+	position: absolute;
+	opacity: 1;
+	top: -21px;
+	right: 0;
+	bottom: 0;
+	left: 212px;
+	transition: opacity 0.05s ease;
+}
+
+
+.gliched-hikari:hover {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+}
